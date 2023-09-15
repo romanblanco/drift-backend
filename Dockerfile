@@ -34,6 +34,6 @@ RUN chown -R insights:0 /opt/app-root  && \
 
 USER insights
 
-RUN poetry install --without dev --sync
+RUN poetry install --sync # --without dev --sync
 
 CMD poetry run ./run_app.sh
